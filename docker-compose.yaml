@@ -17,7 +17,7 @@ services:
   db:
     build:
       context: .
-      dockerfile: docker/db/Dockerfile
+      dockerfile: docker/db/Dockerfilhttps://chatgpt.com/c/67c48d5d-8d9c-800a-8113-aeed4f11c15de
     ports:
       - "5433:5432"
     networks:
