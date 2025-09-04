@@ -1,19 +1,36 @@
+:root{
+    --color1: #cccfe0;
+    --color2: #2e3440;
+    --color3: #272b35;
+    --color4: #1e2229;
+    --color5: #e5e9f0;
+}
+
 * {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-
-#login-page{
+.flex-row-center-center{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.flex-column-center-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#login-page{
     height: 100vh;
 }
 
 body {
-    background-color: #2e3440;
+    background-color: var(--color4);
     margin: 0;
 }
 
@@ -23,17 +40,13 @@ button{
 }
 
 #login-page > div{
-    border: 1px solid #1e2229;
+    border: 1px solid var(--color4);
     padding: 3em;
     border-radius: 1em;
-    background-color: #eceff4;
+    background-color: var(--color1);
     width: 30%;
-    height: calc(0.2* 100vh);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* height: calc(0.2* 100vh); */
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-    flex-direction: column;
 }
 
 #login-page > div > form{
@@ -46,7 +59,7 @@ button{
     padding: 1em;
 }
 
-#login-page > div > form > input{
+input{
     width: 100%;
     height: 1.5em;
     border-radius: 1em;
@@ -59,22 +72,86 @@ button{
     box-sizing: border-box;
 }
 
-#login-page > div > form > button{
-    background-color: 	#272b35;
-    color: #e5e9f0;
+button{
+    background-color: var(--color3);
+    color: var(--color5);
     width: 100%;
     height: 2.5em;
     border-radius: 1em;
     border: none;
 }
 
-#login-page > div > form > button:hover {
+button:hover {
     transform: scale(1.03);
     cursor: pointer;
+}
+
+.form-control{
+    width: 100%;
+    position: relative;
+}
+
+.form-control > input{
+    padding-left: 2.5em;
+}
+
+.form-control > i {
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 2em;
+    width: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    justify-content: space-between;
+}
+
+nav > ul {
+    width: 100%;
+    display: flex;
+    gap: 1.5em;
+    color: white;
+}
+
+nav > ul > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav > ul > li:hover {
+    transform: scale(1.1);
+}
+
+nav > ul > li > i, nav > i {
+    font-size: 2.5em;
+}
+
+nav > ul + ul {
+    justify-content: flex-end;
+    margin-right: 1em;
+}
+
+.mobile-icons {
+    display: none;
 }
 
 @media (max-width: 600px){
     #login-page > div{
         width: 100%;
+    }
+    .mobile-icons {
+        display: flex;
+    }
+    
+    .desktop-icons{
+        display: none;
     }
 }
