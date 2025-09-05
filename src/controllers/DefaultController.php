@@ -11,4 +11,9 @@ class DefaultController extends AppController{
         public function dashboard() {
             $this->render('dashboard');
         }
+
+        public function boss_selection() {
+            $this->render('boss_selection');
+        }
+        
 }

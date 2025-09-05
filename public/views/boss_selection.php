@@ -8,24 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b7c75b547d.js" crossorigin="anonymous"></script>
     
-    <link href="../styles/main.css" rel="stylesheet">
-    <link href="../styles/boss_selection.css" rel="stylesheet">
-    <script src="../scripts/script.js" defer></script>
+    <link href="public/styles/main.css" rel="stylesheet">
+    <link href="public/styles/boss_selection.css" rel="stylesheet">
+    <script src="public/scripts/script.js" defer></script>
     <title>BOSS_SELECTION</title>
 </head>
 <body>
     <nav class="flex-row-center-center">
         <ul class="desktop-icons">
             <li>
-                <img src="../images/logo_wht.png">
+                <img src="public/images/logo_wht.png">
                 <span>LOOT TRACKER</span>
             </li>
-            <!--
-            <li>
-                <i class="fa-solid fa-pizza-slice"></i>
-                <span>OFERTA</span>
-            </li>
-            -->
         </ul>
         <ul class="mobile-icons">
             <li id="hamburger-menu">
@@ -36,8 +30,7 @@
     </nav>
     <main>
         <section>
-            <!-- SECTION -->
-                <p>Wybierz lub dodaj postać: </p>
+            <p>Wybierz lub dodaj postać: </p>
             <div class="card">
                 <i class="fa-solid fa-plus"></i>
                 <p>Dodaj postać</p>
@@ -52,30 +45,39 @@
         <aside>
             <h2 class="aside-title">Wybierz bossa klikając w ikonkę poziomu trudności</h2>
             <div class="boss-card">
-                <img src="../images/Ivravul.png">
+                <img src="public/images/Ivravul.png">
                 <p>Ivravul</p>
                 <div class="difficulty-icons">
-                    <!--<img src="../images/Easy.png">-->
-                    <img src="../images/Normal.png">
-                    <img src="../images/Hard.png">  
+                    <!--<img src="public/images/Easy.png">-->
+                    <img src="public/images/Normal.png">
+                    <img src="public/images/Hard.png">  
                 </div>    
             </div>
             <div class="boss-card">
-                <img src="../images/Jaska.png">
+                <img src="public/images/Jaska.png">
                 <p>Jaskółka</p>
                 <div class="difficulty-icons">
-                    <img src="../images/Easy.png">
-                    <img src="../images/Normal.png">
-                    <img src="../images/Hard.png">  
+                    <img src="public/images/Easy.png">
+                    <img src="public/images/Normal.png">
+                    <img src="public/images/Hard.png">  
                 </div>      
             </div>
             <div class="boss-card">
-                <img src="../images/V2.png">
+                <img src="public/images/V2.png">
                 <p>Konstrukt</p>
                 <div class="difficulty-icons">
-                    <img src="../images/Easy.png">
-                    <img src="../images/Normal.png">
-                    <img src="../images/Hard.png">  
+                    <img src="public/images/Easy.png">
+                    <img src="public/images/Normal.png">
+                    <img src="public/images/Hard.png">  
+                </div>      
+            </div>
+            <div class="boss-card">
+                <img src="public/images/Admiral.png">
+                <p>Admirał Utoru</p>
+                <div class="difficulty-icons">
+                    <!--<img src="public/images/Easy.png">-->
+                    <img src="public/images/Normal.png">
+                    <img src="public/images/Hard.png">  
                 </div>      
             </div>
         </aside>
@@ -88,9 +90,9 @@
                 <p>Server</p>
             </div>
             <div class="boss-select">
-                <img src="../images/V2.png">
+                <img src="public/images/V2.png">
                 <p>Konstrukt</p>
-                <img src="../images/Easy.png" alt="difficulty-icon-select">
+                <img src="public/images/Easy.png" alt="difficulty-icon-select">
             </div>
             <div class="card-continue">
                 <p>Przejdź do zbierania</p>
