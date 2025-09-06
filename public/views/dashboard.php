@@ -37,13 +37,13 @@
     <main>
         <section>
             <!-- SECTION -->
-            <a href="boss_selection">
+                <div class="card">
+                    <a href="boss_selection" class="card-link"></a>
+                    <img src="public/images/keyarttlo.jpg">
+                    <p>Rozpocznij zbieranie</p>
+                </div>
             <div class="card">
-                <img src="public/images/keyarttlo.jpg">
-                <p>Rozpocznij zbieranie</p>
-            </div>
-            </a>
-            <div class="card">
+                <a href="boss_selection" class="card-link"></a>
                 <img src="public/images/horseshoe.jpg">
                 <p>Twój loot</p>
             </div>

@@ -14,8 +14,8 @@
 <body id="login-page" class="flex-row-center-center">
     
     <div class="flex-column-center-center">
-        <h1>LOGIN</h1>
-        <form class="flex-column-center-center" action="login" method="post">
+        <h1>REGISTER</h1>
+        <form class="flex-column-center-center" action="register" method="post">
             <?php
                 if (isset($messages)) {
                     foreach ($messages as $message) {
@@ -33,8 +33,12 @@
                 <input type="password" name="password" placeholder="password" required>
             </div>
 
-            <button type="submit"><i class="fa-solid fa-arrow-right-to-bracket" style="color: #e5e9f0;"></i> SIGN IN</button>
-            <a href="register" class="register-button"><i class="fa-solid fa-user-plus" style="color: #e5e9f0;"></i> REGISTER</a>
+            <div class="form-control">
+                <i class="fa-solid fa-lock" style="color: #272b35;"></i>
+                <input type="password" name="confirm_password" placeholder="confirm_password" required>
+            </div>
+
+            <button type="submit"><i class="fa-solid fa-arrow-right-to-bracket" style="color: #e5e9f0;"></i> REGISTER</button>
         </form>
 
     </div>

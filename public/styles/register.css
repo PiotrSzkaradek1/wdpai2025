@@ -86,24 +86,6 @@ button:hover {
     cursor: pointer;
 }
 
-.register-button {
-    display: inline-block;
-    margin-top: 1em;
-    padding: 0.7em 1.5em;
-    background-color: var(--color3);
-    color: var(--color5);
-    text-decoration: none;
-    border-radius: 0.5em;
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    text-align: center;
-}
-
-.register-button:hover {
-    transform: scale(1.05);
-}
-
-
 .form-control{
     width: 100%;
     position: relative;

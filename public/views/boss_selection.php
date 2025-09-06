@@ -32,6 +32,7 @@
         <section>
             <p>Wybierz lub dodaj postać: </p>
             <div class="card">
+                <a href="add_character" class="card-link"></a>
                 <i class="fa-solid fa-plus"></i>
                 <p>Dodaj postać</p>
             </div>

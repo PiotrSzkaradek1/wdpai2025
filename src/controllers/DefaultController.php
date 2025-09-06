@@ -15,5 +15,13 @@ class DefaultController extends AppController{
         public function boss_selection() {
             $this->render('boss_selection');
         }
+
+        public function register() {
+            $this->render('register');
+        }
+
+        public function add_character() {
+            $this->render('add_character');
+        }
         
 }
