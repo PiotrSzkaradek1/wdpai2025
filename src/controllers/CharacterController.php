@@ -25,35 +25,63 @@ class CharacterController extends AppController {
         ]);
     }
 
+
+    public function boss_selection() {
+        $professions = ['Druid', 'Voodoo', 'Mag Ognia', 'Rycerz', 'Sheed', 'Łucznik', 'Barbarzyńca'];
+        $servers = ['Thanar', 'Veskara', 'Vardis'];
+        $email = $_SESSION['user_email'] ?? null;
+        if (!$email) {
+            $characters = []; // jeśli użytkownik nie jest zalogowany
+        } else {
+            $userRepository = new UserRepository();
+            $user_id = $userRepository->getUserIdByEmail($email);
+
+            if ($user_id) {
+                $characters = $this->characterRepository->getCharactersByUserId($user_id);
+            } else {
+                $characters = [];
+            }
+        }
+
+        $this->render('boss_selection', [
+            'professions' => $professions,
+            'servers' => $servers,
+            'characters' => $characters
+        ]);
+    }
+
+
     public function add_character_post() {
-        // POST: zapis do bazy
+        header('Content-Type: application/json');
+
         $nickname = $_POST['nickname'] ?? null;
         $level = $_POST['level'] ?? null;
         $profession = $_POST['profession'] ?? null;
         $server = $_POST['server'] ?? null;
 
         if (!$nickname || !$level || !$profession || !$server) {
-            $messages[] = "Wszystkie pola muszą być wypełnione!";
-            return $this->add_character();
+            echo json_encode(['success' => false, 'message' => 'Wszystkie pola muszą być wypełnione!']);
+            return;
         }
 
         $email = $_SESSION['user_email'] ?? null;
         if (!$email) {
-            die("Nie jesteś zalogowany!");
+            echo json_encode(['success' => false, 'message' => 'Nie jesteś zalogowany!']);
+            return;
         }
 
         $userRepository = new UserRepository();
         $user_id = $userRepository->getUserIdByEmail($email);
 
         if (!$user_id) {
-            die("Nie udało się znaleźć użytkownika!");
+            echo json_encode(['success' => false, 'message' => 'Nie udało się znaleźć użytkownika!']);
+            return;
         }
 
         $character = new Character($user_id, $nickname, $level, $profession, $server);
         $this->characterRepository->addCharacter($character);
 
-        $url = "http://$_SERVER[HTTP_HOST]";
-        header("Location: {$url}/boss_selection");
-        exit;
+        echo json_encode(['success' => true]);
     }
+
 }

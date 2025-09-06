@@ -8,7 +8,7 @@ $path = parse_url($path, PHP_URL_PATH);
 // GET routes
 Routing::get('index', 'DefaultController');
 Routing::get('dashboard', 'DefaultController');
-Routing::get('boss_selection', 'DefaultController');
+Routing::get('boss_selection', 'CharacterController');
 Routing::get('add_character', 'CharacterController');
 
 // POST routes

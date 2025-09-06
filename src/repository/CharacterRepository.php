@@ -19,7 +19,9 @@ class CharacterRepository extends Repository {
             'server' => $character->getServer()
         ]);
     }
-
+    //funckje do pobierania enumów z bazy danych, jeśli baza ich obsługuje
+    //na razie nie działą, będzie kiedyś naprawione
+    /*
     public function getProfessions(): array {
         // pobiera enum z bazy danych np. PostgreSQL
         $stmt = $this->database->connect()->query("
@@ -34,4 +36,37 @@ class CharacterRepository extends Repository {
         ");
         return $stmt->fetchAll(PDO::FETCH_COLUMN);
     }
+        */
+
+
+    public function getProfessions(): array {
+        return ['warrior', 'mage', 'healer', 'rogue']; // Twoje profesje
+    }
+
+    public function getServers(): array {
+        return ['server1', 'server2', 'server3']; // Twoje serwery
+    }
+
+    public function getCharactersByUserId($userId) {
+    $conn = $this->database->connect();
+    $stmt = $conn->prepare('SELECT * FROM characters WHERE user_id = :user_id');
+    $stmt->execute(['user_id' => $userId]);
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $characters = [];
+    foreach ($result as $row) {
+        $characters[] = new Character(
+            $row['user_id'],
+            $row['name'],
+            $row['level'],
+            $row['profession'],
+            $row['server'],
+            $row['id']
+        );
+    }
+    return $characters;
+}
+
+
+
 }
