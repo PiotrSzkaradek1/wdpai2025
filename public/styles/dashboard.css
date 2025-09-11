@@ -8,6 +8,22 @@ nav {
     background-color: var(--color2);
     height: 120px;
 }
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--color1);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.logout-btn:hover {
+    background: var(--color4);
+}
+
 
 .desktop-icons li span{
     font-size: 22px;

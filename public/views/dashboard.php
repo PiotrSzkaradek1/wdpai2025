@@ -20,12 +20,13 @@
                 <img src="public/images/logo_wht.png">
                 <span>LOOT TRACKER</span>
             </li>
-            <!--
             <li>
-                <i class="fa-solid fa-pizza-slice"></i>
-                <span>OFERTA</span>
-            </li>
-            -->
+            <a href="logout.php" class="logout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <a href="logout" class="logout-btn">Wyloguj</a>
+
+            </a>
+        </li>
         </ul>
         <ul class="mobile-icons">
             <li id="hamburger-menu">
@@ -43,28 +44,10 @@
                     <p>Rozpocznij zbieranie</p>
                 </div>
             <div class="card">
-                <a href="boss_selection" class="card-link"></a>
+                <a href="stash" class="card-link"></a>
                 <img src="public/images/horseshoe.jpg">
                 <p>Twój loot</p>
             </div>
-            <!--
-            <div class="card">
-                <img src="https://random.imagecdn.app/500/500">
-                <p>CARD 1</p>
-            </div>
-            <div class="card">
-                <img src="https://random.imagecdn.app/500/500">
-                <p>CARD 1</p>
-            </div>
-            <div class="card">
-                <img src="https://random.imagecdn.app/500/500">
-                <p>CARD 1</p>
-            </div>
-            <div class="card">
-                <img src="https://random.imagecdn.app/500/500">
-                <p>CARD 1</p>
-            </div>
-        -->
         </section>
         <aside>
             ASIDE

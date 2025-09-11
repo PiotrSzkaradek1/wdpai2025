@@ -14,6 +14,8 @@
     <script src="public/scripts/add_character_modal.js" defer></script>
     <script src="public/scripts/character_selection.js" defer></script>
     <script src="public/scripts/boss_selection.js" defer></script>
+    <script src="public/scripts/continue_to_looting.js" defer></script>
+
 
 
     <title>BOSS_SELECTION</title>
@@ -63,10 +65,12 @@
                 <div class="difficulty-icons">
                     <!--<img src="public/images/Easy.png">-->
                     <img src="public/images/Normal.png"
+                        data-boss_id=1
                         data-boss="Ivravul" 
                         data-difficulty="Normal" 
                         data-difficulty-img="public/images/Normal.png">
                     <img src="public/images/Hard.png"
+                        data-boss_id=1
                         data-boss="Ivravul" 
                         data-difficulty="Hard" 
                         data-difficulty-img="public/images/Hard.png">  
@@ -77,14 +81,17 @@
                 <p>Jaskółka</p>
                 <div class="difficulty-icons">
                     <img src="public/images/Easy.png"
+                    data-boss_id=2
                     data-boss="Jaskółka" 
                     data-difficulty="Easy" 
                     data-difficulty-img="public/images/Easy.png">
                     <img src="public/images/Normal.png"
+                    data-boss_id=2
                     data-boss="Jaskółka" 
                     data-difficulty="Normal" 
                     data-difficulty-img="public/images/Normal.png">
                     <img src="public/images/Hard.png"
+                    data-boss_id=2
                     data-boss="Jaskółka" 
                     data-difficulty="Hard" 
                     data-difficulty-img="public/images/Hard.png">  
@@ -95,14 +102,17 @@
                 <p>Konstrukt</p>
                 <div class="difficulty-icons">
                     <img src="public/images/Easy.png"
+                    data-boss_id=3
                     data-boss="Konstrukt" 
                     data-difficulty="Easy" 
                     data-difficulty-img="public/images/Easy.png">
                     <img src="public/images/Normal.png"
+                    data-boss_id=3
                     data-boss="Konstrukt" 
                     data-difficulty="Normal" 
                     data-difficulty-img="public/images/Normal.png">
                     <img src="public/images/Hard.png"
+                    data-boss_id=3
                     data-boss="Konstrukt" 
                     data-difficulty="Hard" 
                     data-difficulty-img="public/images/Hard.png">  
@@ -114,10 +124,12 @@
                 <div class="difficulty-icons">
                     <!--<img src="public/images/Easy.png">-->
                     <img src="public/images/Normal.png"
+                    data-boss_id=4
                     data-boss="Admirał Utoru" 
                     data-difficulty="Normal" 
                     data-difficulty-img="public/images/Normal.png">
                     <img src="public/images/Hard.png"
+                    data-boss_id=4
                     data-boss="Admirał Utoru" 
                     data-difficulty="Hard" 
                     data-difficulty-img="public/images/Hard.png">  
@@ -133,11 +145,11 @@
                 <p>Server</p>
             </div>
             <div class="boss-select">
-                <img src="public/images/V2.png">
-                <p>Konstrukt</p>
+                <img src="public/images/Herszt.png">
+                <p>Tajemnicza postać</p>
                 <img src="public/images/Easy.png" alt="difficulty-icon-select">
             </div>
-            <div class="card-continue">
+            <div class="card-continue" id="goToLooting">
                 <p>Przejdź do zbierania</p>
             </div>
         </div>

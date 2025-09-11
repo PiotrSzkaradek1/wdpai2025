@@ -4,28 +4,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
     difficultyIcons.forEach(icon => {
         icon.addEventListener("click", () => {
-            const bossName = icon.dataset.boss;
-            const difficulty = icon.dataset.difficulty;
-            const difficultyImg = icon.dataset.difficultyImg;
+            const selectedBoss = {
+                id: icon.dataset.boss_id,
+                boss: icon.dataset.boss,
+                difficulty: icon.dataset.difficulty,
+                bossImg: icon.closest(".boss-card").querySelector("img").src,
+                difficultyImg: icon.dataset.difficultyImg
+            };
 
-            // znajdź obrazek bossa w tej samej karcie
-            const bossCard = icon.closest(".boss-card");
-            const bossImg = bossCard.querySelector("img").src;
-
-            // nadpisz zawartość sekcji wyboru
+            // Wyświetlenie w podglądzie
             bossSelect.innerHTML = `
-                <img src="${bossImg}" alt="boss">
-                <p>${bossName}</p>
-                <img src="${difficultyImg}" alt="${difficulty}">
+                <img src="${selectedBoss.bossImg}" alt="${selectedBoss.boss}">
+                <p>${selectedBoss.boss}</p>
+                <img src="${selectedBoss.difficultyImg}" alt="${selectedBoss.difficulty}">
             `;
 
-            // zapisz wybór w localStorage (żeby móc użyć w looting.php)
-            localStorage.setItem("selectedBoss", JSON.stringify({
-                boss: bossName,
-                difficulty: difficulty,
-                bossImg: bossImg,
-                difficultyImg: difficultyImg
-            }));
+            // Wyślij dane do save_selection.php razem z obecnie wybraną postacią (jeśli istnieje)
+            const character = window.selectedCharacter || null;
+            fetch("/public/save_selection.php", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                credentials: "same-origin",
+                body: JSON.stringify({character, boss: selectedBoss})
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log("Save selection response:", data);
+            });
+
+            // Zachowaj lokalnie na wypadek użycia w innym miejscu
+            window.selectedBoss = selectedBoss;
         });
     });
 });

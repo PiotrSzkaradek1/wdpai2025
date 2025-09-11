@@ -23,5 +23,13 @@ class DefaultController extends AppController{
         public function add_character() {
             $this->render('add_character');
         }
+
+        public function looting() {
+            $this->render('looting');
+        }
+
+        public function stash() {
+            $this->render('stash');
+        }
         
 }
