@@ -25,11 +25,9 @@ class StashController extends AppController
 
         $characters = $this->repo->getCharactersByUser($userId);
 
-        // Pobranie zaznaczonej postaci i bossa z sesji
         $charData = $_SESSION['selectedCharacter'] ?? null;
         $bossData = $_SESSION['selectedBoss'] ?? null;
 
-        // Jeśli brak zaznaczonej postaci, ustaw pierwszą jako domyślną
         if (!$charData && !empty($characters)) {
             $firstChar = $characters[0];
             $charData = [
@@ -42,7 +40,6 @@ class StashController extends AppController
             $_SESSION['selectedCharacter'] = $charData;
         }
 
-        // Fallback dla pól postaci
         $charData = array_merge([
             'id' => 0,
             'nickname' => '',
@@ -59,7 +56,7 @@ class StashController extends AppController
             $charData['server']
         );
 
-        // Jeśli brak bossa w sesji, ustaw domyślnego
+ 
         if (!$bossData) {
             $bossData = ['id'=>1,'boss'=>'Ivravul','difficulty'=>'Normal'];
             $_SESSION['selectedBoss'] = $bossData;
@@ -77,7 +74,7 @@ class StashController extends AppController
             $bossData['difficulty']
         );
 
-        // Pobranie danych statystyk z repozytorium
+ 
         $totalGold   = $this->repo->getTotalGold($character, $boss);
         $totalTracks = $this->repo->getTotalTracks($character, $boss);
         $items       = $this->repo->getAllItems($character, $boss);

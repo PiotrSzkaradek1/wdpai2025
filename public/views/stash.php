@@ -55,7 +55,6 @@
         <h2 class="aside-title">Wybierz bossa klikając w ikonkę poziomu trudności</h2>
 
         <?php 
-        // tablica bossów do wygodnego generowania
         $bosses = [
             ['id'=>1,'name'=>'Ivravul','img'=>'public/images/Ivravul.png','difficulties'=>['Normal','Hard']],
             ['id'=>2,'name'=>'Jaskółka','img'=>'public/images/Jaska.png','difficulties'=>['Easy','Normal','Hard']],

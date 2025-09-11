@@ -37,7 +37,6 @@
     </nav>
     <main>
         <section>
-            <!-- SECTION -->
                 <div class="card">
                     <a href="boss_selection" class="card-link"></a>
                     <img src="public/images/keyarttlo.jpg">
@@ -50,7 +49,6 @@
             </div>
         </section>
         <aside>
-            ASIDE
         </aside>
     </main>
     

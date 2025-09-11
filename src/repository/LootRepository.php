@@ -92,7 +92,7 @@ class LootRepository extends Repository {
             foreach ($loot->getSyngs() as $syng) {
                 $stmt->execute([
                     'record' => $recordId,
-                    'tier' => $syng['quality']  // albo zmień nazwę w bazie na quality
+                    'tier' => $syng['quality'] 
                 ]);
             }
 

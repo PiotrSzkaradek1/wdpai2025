@@ -1,6 +1,4 @@
-// public/scripts/stash.js
 document.addEventListener('DOMContentLoaded', () => {
-  // --- elementy DOM ---
   const sumGoldEl = document.getElementById('sum-gold');
   const sumTracksEl = document.getElementById('sum-tracks');
   const itemsBody = document.getElementById('items-summary-body');
@@ -9,11 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnDrifs = document.getElementById('show-drifs');
   const modalContainer = document.getElementById('modal-container');
 
-  // --- zmienne globalne ---
+
   let selectedBoss = null;
   let selectedCharacter = null;
 
-  // --- funkcje pomocnicze ---
+ 
   function escapeHtml(s) {
     return ('' + s).replace(/[&<>"']/g, c => ({
       '&': '&amp;',
@@ -37,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modalContainer.querySelector('.modal-close').addEventListener('click', () => modalContainer.innerHTML = '');
   }
 
-  // --- fetch statystyk ---
+
   async function fetchStats() {
     if (!selectedBoss || !selectedCharacter) return;
 
@@ -142,6 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
     showModal('Drify', rows || '<p>Brak</p>');
   });
 
-  // --- inicjalizacja ---
+  
   updateSelectionAndFetch();
 });

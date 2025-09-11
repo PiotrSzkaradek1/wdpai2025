@@ -40,11 +40,11 @@ class CharacterRepository extends Repository {
 
 
     public function getProfessions(): array {
-        return ['warrior', 'mage', 'healer', 'rogue']; // Twoje profesje
+        return ['warrior', 'mage', 'healer', 'rogue'];
     }
 
     public function getServers(): array {
-        return ['server1', 'server2', 'server3']; // Twoje serwery
+        return ['server1', 'server2', 'server3'];
     }
 
     public function getCharactersByUserId($userId) {

@@ -7,6 +7,6 @@ class LogoutController extends AppController {
         session_start();
         session_unset();
         session_destroy();
-        $this->redirect('login'); // albo header("Location: login.php");
+        $this->redirect('login');
     }
 }

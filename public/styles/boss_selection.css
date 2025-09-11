@@ -304,12 +304,12 @@ aside {
     background: rgba(0,0,0,0.5);
     justify-content: center;
     align-items: center;
-    display: none; /* domyślnie ukryty */
+    display: none;
     z-index: 999;
 }
 
 #character-modal.show {
-    display: flex; /* pokaż po kliknięciu */
+    display: flex;
 }
 
 #character-modal form {

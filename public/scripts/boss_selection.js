@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="${selectedBoss.difficultyImg}" alt="${selectedBoss.difficulty}">
             `;
 
-            // Wyślij dane do save_selection.php razem z obecnie wybraną postacią (jeśli istnieje)
+            // Wyślij dane do save_selection.php razem z obecnie wybraną postacią
             const character = window.selectedCharacter || null;
             fetch("/public/save_selection.php", {
                 method: "POST",

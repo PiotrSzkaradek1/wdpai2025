@@ -20,12 +20,7 @@
                 <img src="public/images/logo_wht.png">
                 <span>LOOT TRACKER</span>
             </li>
-            <!--
-            <li>
-                <i class="fa-solid fa-pizza-slice"></i>
-                <span>OFERTA</span>
-            </li>
-            -->
+  
         </ul>
         <ul class="mobile-icons">
             <li id="hamburger-menu">

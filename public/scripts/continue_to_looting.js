@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(r => r.json())
         .then(data => {
             if (data.status === "ok") {
-                // Dopiero teraz przekierowujemy
                 window.location.href = "looting";
             } else {
                 alert("Błąd zapisu do sesji");

@@ -15,7 +15,6 @@ class CharacterController extends AppController {
 
     public function add_character() {
         
-        // GET: wyświetlenie formularza
         $professions = $this->characterRepository->getProfessions();
         $servers = $this->characterRepository->getServers();
 
@@ -31,7 +30,7 @@ class CharacterController extends AppController {
         $servers = ['Thanar', 'Veskara', 'Vardis'];
         $email = $_SESSION['user_email'] ?? null;
         if (!$email) {
-            $characters = []; // jeśli użytkownik nie jest zalogowany
+            $characters = [];
         } else {
             $userRepository = new UserRepository();
             $user_id = $userRepository->getUserIdByEmail($email);

@@ -13,7 +13,7 @@ class SecurityController extends AppController
         parent::__construct();
         $this->userRepository = new UserRepository();
 
-        // Start sesji jeśli jeszcze nie rozpoczęta
+
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
@@ -34,7 +34,7 @@ class SecurityController extends AppController
             return $this->render('login', ['messages' => ['Invalid email or password']]);
         }
 
-        // Logowanie udane – zapis do sesji
+
         $_SESSION['user_email'] = $user->getEmail();
 
         $url = "http://$_SERVER[HTTP_HOST]";
@@ -56,7 +56,7 @@ class SecurityController extends AppController
             return $this->render('register', ['messages' => ['Passwords do not match']]);
         }
 
-        // Sprawdzenie czy użytkownik już istnieje
+ 
         if ($this->userRepository->getUser($email)) {
             return $this->render('register', ['messages' => ['User already exists']]);
         }

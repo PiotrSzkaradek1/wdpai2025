@@ -17,7 +17,6 @@ if (isset($data['boss']['id'])) {
     $data['boss']['id'] = (int)$data['boss']['id'];
 }
 
-// Zapis do sesji
 $_SESSION['selectedCharacter'] = $data['character'];
 $_SESSION['selectedBoss'] = $data['boss'];
 

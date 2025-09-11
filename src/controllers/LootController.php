@@ -26,7 +26,7 @@ class LootController extends AppController
         $this->drifRepository = new DrifRepository();
     }
 
-    // 🔹 do wyświetlania widoku
+   
     public function looting(): void
     {
         $character = $_SESSION['selectedCharacter'] ?? null;
@@ -52,7 +52,7 @@ class LootController extends AppController
         ]);
     }
 
-    // 🔹 do zapisywania lootu
+
     public function save_loot(): void
     {
         header('Content-Type: application/json');
